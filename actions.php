@@ -75,9 +75,37 @@ function ajout($conn){
 }
 
 function getVideo($conn, $userId, $type){
+    $res = "";
     if ($type == "owner"){
+        // echo $userId;
 
+        $query = "SELECT videoId, userId, name, link FROM Videos WHERE userId =".$userId;
+        // echo '<br> '.$query;
+        $result = $conn->query($query);
+        // echo $result->rowCount();
+
+        if ($result->rowCount() > 0) {
+            $res .= '<table border="1" cellspacing="0" cellpadding="10">';
+            $res .= '<tr>';
+            $res .= '<th>Name</th>';
+            $res .= '<th>Activité</th>';
+            $res .= '</tr>';
+
+            $sn = 1;
+            while($data = $result->fetch(PDO::FETCH_ASSOC)) {
+                $res .= " <tr> ";
+                $res .= "<td>".$data['name']."</td>";
+                $res .= "<td>".$data['name']."</td>";
+                $res .= "<tr>";
+                 $sn++;
+                }
+
+        }
+        else{
+            $res .= 'Aucune videos ajoutées';
+        }
+                    
         
-        return "test";
+        return $res;
     }
 }
