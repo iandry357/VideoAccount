@@ -1,0 +1,588 @@
+
+body {
+    font-family: "Lato", sans-serif; 
+    color:black;
+}
+
+pre {
+    text-align:left;
+
+}
+
+h1{
+/*    text-align: center; */
+    font-size: 200%;
+    margin-top: 0.5em;
+}
+
+h2{
+/*    text-align: center;*/
+    font-size: 150%
+}
+
+h3{
+    text-align: center;
+    font-size: 100%
+}
+p{
+	/* font-size:125%; */
+    color: inherit;
+}
+
+body, html {
+    height: 100vh;
+    width : 100vw;
+    /* color: #777; */
+    /* line-height: 1.8; */
+    margin: 0;
+    max-width: 100%;
+}
+
+main {
+	background: white;
+	font-size: 21px;
+}
+
+option,input, button, select{
+    text-align: center;
+    font-size: 100%;
+    /* color: #777; */
+}
+
+.toplink{
+    height:100% ;
+    color: #777;
+}
+
+#menu > li > a, #menu-left > li > a {
+    color:white;
+    opacity: 1;
+    font-size: 21px;
+}
+
+pre{
+    background:lightgrey;
+}
+
+#div1{
+    visibility: hidden;
+}
+
+#div2{
+    visibility: hidden;
+}
+
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+a:hover { 
+	color: grey;
+}
+
+.navbar-dark .navbar-text{
+    color:white;
+}
+
+.lined{display: inline-block;}
+
+.error{
+	color:red;
+	font-size:200%;
+}
+
+#deb{
+	color:black;
+	display:inline-block;
+}
+
+.marged{
+	margin-left:50px;
+}
+
+.centred{
+	text-align:center;
+}
+
+#conf{
+	color:white;
+	display:inline-block;
+	margin-left:130px;
+}
+
+#exp{
+	color:white;
+	display:inline-block;
+	margin-left:150px;
+}
+
+textarea {color:#777;}
+
+.container{
+    width:100vw;
+    //text-align: center;   
+    padding-right: 0px;  
+    padding-left: 0px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    /* background: white url(images/arbre.jpg) no-repeat center center; */
+    /* background:#015281; */
+    background-size:cover;
+    /* color: #777; */
+}
+
+#level{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.warning {background-color:red;}
+
+#icon{
+    display: inline-block;
+    height: 20%;
+      
+}
+
+
+#title{    
+    display: inline-block;
+    color: #777;
+    font-size:40pt;
+    height:40px;
+}
+
+#treepage {
+    display: inline-block;
+    margin-left: 25%;    
+}
+
+table {
+    /* margin: 0 auto; */
+    text-align:left;
+    /* border-collapse:separate;
+    background-color:white;
+    color:black; */
+}
+
+table caption {
+    color:black;
+    text-align:center;
+}
+
+caption {
+    caption-side: top;
+    font-size:25px;
+    color: #777;
+}
+
+
+td,th {
+    padding: 8px;
+    color:black;
+}
+
+.allArtifacts{
+    background-color:lightgray;
+}
+
+#treepage a{
+    margin-bottom: 2%;
+    text-align: center;
+    font-size: 200%;
+    text-decoration: none;
+}
+
+#myCarousel{
+    width: 100%;
+    height: 100%;
+}
+
+
+ /*CSS du tree */
+.node {
+    cursor: pointer;
+  }
+
+.overlay{
+  background-color:#EEE;
+}
+   
+.node circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+.node text {
+    font-size:15px;
+}
+
+.link {
+    fill: none;
+    stroke: black;
+    stroke-width: 1.5px;
+}
+
+.templink {
+    fill: none;
+    stroke: red;
+    stroke-width: 3px;
+}
+
+.ghostCircle.show{
+    display:block;
+}
+
+.ghostCircle, .activeDrag .ghostCircle{
+    display: none;
+}
+
+#tree-equal{
+    border: 1px solid black;
+    display: inline-block;
+    margin-left: 20px;
+    color: black;
+}
+
+#tree-child{
+    border: 1px solid black;
+    display: inline-block;
+    color: black;
+
+}
+#tree-father{
+    border: 1px solid black;
+    display: inline-block;
+    margin-left: 20px;
+    color: black;
+}
+
+#tree-dif{
+    border: 1px solid black;
+    display: inline-block;
+    margin-left: 20px;
+    color: black;
+}
+
+.tree{
+    text-align: center;    
+    background-color: white;  
+    display: inline-block;  
+}
+
+#radios input[type=radio]{
+    display: none;
+}
+
+#radios input[type=radio]:checked + .tree{
+    background-color: green;
+}
+
+.test{
+    display : inline-block;
+    margin-right: 10em;
+}
+
+#tree{
+	width:100%;
+    background-color: white;
+    opacity:0.75;
+}
+
+#tree a{
+	font-size:125%;
+    color: black;
+}
+
+#tree p{
+	font-size:125%;
+    color: black;
+}
+
+#tree a:hover{
+	font-size:150%;
+    color: black;
+	text-decoration: underline;
+}
+
+
+
+
+/* Essential for the feedback box */
+.fixedFeedback {
+    position: fixed;
+    overflow: hidden;
+    right: -50px;
+    top: 50%;
+    z-index: 1000;
+    height: 40px;
+    width: 140px;
+    /* 134px; */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    /* Enables the text rotation */
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+/* Chat classes */
+#chatBtn {
+    position: fixed;
+    overflow: hidden;
+    top: 20%;
+    left: 0;
+    z-index: 1000;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    display: none;
+}
+
+#chatDiv {
+    position: fixed;
+    top: 25%;
+    left: -102%;
+    bottom: 0;
+    z-index: 999;
+    box-shadow: 0px 0px 10px black;
+    -webkit-box-shadow: 0px 0px 10px black;
+    -moz-box-shadow: 0px 0px 10px black;
+    overflow-y: overlay;
+    max-height: 77%;
+    background: #fff;
+}
+
+.chatCard {
+    margin-bottom: 15px;
+}
+
+.chatDate {
+    padding-top: 4px;
+}
+
+.chatAlert {
+    display: none;
+    position: fixed;
+    top: 26%;
+    width: 23%;
+    z-index: 1001;
+    box-shadow: 0px 0px 3px black;
+    -webkit-box-shadow: 0px 0px 3px black;
+    -moz-box-shadow: 0px 0px 3px black;
+    text-align: center;
+}
+
+.chatNavtabs {
+    position: sticky;
+    top: 0;
+    z-index: 990;
+    background: #fff;
+}
+
+.chatTextareaList {
+    position: sticky;
+    bottom: 0;
+}
+
+
+/* Forum classes */
+
+.forumPosition {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: white;
+}
+
+.forumCard {
+    text-align: left;
+    margin-bottom: 25px;
+}
+.forumCard a {
+    text-decoration: none;
+    color: inherit;
+}
+.forumCard li:hover {
+    background: #f7f7f7;
+}
+.forumCard a:hover .cardHeader strong {
+    text-decoration: underline;
+}
+.cardHeader small {
+    padding-top: 4px;
+}
+
+.card-text p:last-child {
+    margin-bottom: 0 !important;
+}
+
+.forumTopicContent {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.forumTopicContent > textarea {
+    visibility: hidden;
+}
+
+.forumCard blockquote {
+    border-left: 3px solid #BDBDBD;
+    padding: 8px 12px;
+    background: rgba(235, 235, 235, 0.6);
+}
+
+.forumTopicCreation * {
+    text-align: left !important;
+}
+
+.diagramIframe {
+    width: 100%;
+    height: 720px;
+    display: block;
+}
+
+.diagramImage {
+    transition: border 0.5s ease;
+    cursor: pointer;
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.selectedImage {
+    transition: border 0.5s ease;
+    cursor: pointer;
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #0cb13e;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+// For the skill tree, from https://www.w3schools.com/howto/howto_js_treeview.asp
+
+/* Remove default bullets */
+#myUL {
+  list-style-type: none;
+}
+
+.#myUL {
+  list-style-type: none;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+ul.creditlist {
+    list-style-type:disc;;
+}
+
+
+/* Remove margins and padding from the parent ul */
+#myUL {
+  margin: 0;
+  padding: 0;
+  width: 70%;
+  /*border: 1px solid #ddd;*/
+}
+
+/* skill legend */
+
+#skillLegend {
+	width: 70%;
+	text-align:right;
+	float: ;
+}
+
+/* set the skill slider to the right */
+#myUL input {
+	float: right;
+}
+
+/* Style the caret/arrow */
+.caret {
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+  transform: rotate(90deg);
+}
+
+/* Hide the nested list */
+.nested {
+  display: none;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+  display: block;
+}
+
+input[type="range"]::-moz-range-progress {
+  background-color: #138496; 
+}
+input[type="range"]::-moz-range-track {  
+  background-color: grey;
+}
+
+#project-list {
+	display: block; //table-cell;
+    vertical-align: top;
+	width:100%;
+}
+
+#activity-list {
+	display: block; //table-cell;
+    vertical-align: top;
+	width:100%;
+}
+
+#task-list {
+	display: block; //table-cell;
+    vertical-align: top;
+	width:100%;
+}
+
+#container {
+	display:table;
+	width:100%;
+}
+
+a.list-group-item .list-group-item-action .active {
+	color:red;
+}
+
+#mapid { height: 180px; } /* for leaflet maps */
+
+.box {
+    background-color: gray; /* Changing background color */
+//    font-weight: bold; /* Making font bold */
+    border-radius: 10px; /* Making border radius */
+    width: auto; /* Making auto-sizable width */
+    height: auto; /* Making auto-sizable height */
+    padding: 2px 10px 1px 10px; /* Making space around letters */
+    font-size: 18px; /* Changing font size */
+}
