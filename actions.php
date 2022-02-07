@@ -37,3 +37,47 @@ $conn->exec($sql) or die ("reset DB error");
         }
     }
 }
+
+function ajout($conn){
+    if(isset($_POST['Submit'])) {
+        $userId = $_SESSION["userId"];    
+        $vname = $_POST['vname'];
+        $vlink = $_POST['vlink'];
+        
+                
+        // checking empty fields
+        if( empty($vname) || empty($vlink) ) {                
+            if(empty($vname)) {
+                echo '<font color="red">Video Name field is empty.</font><br>';
+            }
+            if(empty($pcode)) {
+                echo '<font color="red">Video link field is empty.</font><br>';
+            }
+            
+            
+        } else { 
+            // if all the fields are filled (not empty)             
+            //insert data to database
+            $stmt = $conn->prepare("insert into Videos (userId, name, link) values(:userId, :name,:link)");
+            $stmt->bindParam(':userId', $userId, PDO::PARAM_INT);
+            $stmt->bindParam(':name', $vname, PDO::PARAM_STR);
+            $stmt->bindParam(':link', $vlink, PDO::PARAM_STR);
+            $stmt->execute() or die(mysql_error());
+            // $result = mysqli_query($conn, "INSERT INTO Videos(userId, vname, vlink) VALUES('$userId', '$vname','$vlink')");
+                    
+            //display success message
+            echo '<font color="green">Data added successfully.</font>';
+                
+        }
+        
+    }
+    addVideo($conn);
+}
+
+function getVideo($conn, $userId, $type){
+    if ($type == "owner"){
+
+        
+        return "test";
+    }
+}

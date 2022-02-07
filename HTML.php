@@ -370,29 +370,6 @@
         return $timer;
     }
 
-    /**
-     * Generate the modal to retrieve feedback from the user when she/he selects the answer specified as the one needing feedback.
-     * The answer is the lowest score possible on a vote for example. Thus, needing an explanation.
-     * @param int $id ⇾ the id of the list element
-     */
-    function genAnswerFeedbackModal($id) {
-        return "<div class='modal fade' id='feedbackAnswer-".$id."' tabindex='-1' role='dialog' data-backdrop='static'>
-            <div class='modal-dialog modal-dialog-centered modal-lg' role='document'>
-            <div class='modal-content'>
-                <div class='modal-header'>
-                    <h5 class='modal-title'>Please explain what is wrong with this question/answer.</h5>
-                    </button>
-                </div>
-                <div class='modal-body'>
-                    <textarea id='feedbackAnswerTextarea-".$id."' class='form-control' rows='4'></textarea>
-                </div>
-                <div class='modal-footer'>
-                    <button type='button' class='btn btn-info' data-dismiss='modal' data-task-id='".$id."' id='feedbackAnswerSubmit-".$id."'>Confirm</button>
-                </div>
-            </div>
-            </div>
-        </div>";
-    }
 
     /**
      * Generate a clickable image and a hidden input that stores the base64 image value.

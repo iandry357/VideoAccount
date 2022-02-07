@@ -44,7 +44,10 @@ switch ($mode) {
         echo "init sd";
         break;
     case "AddVideo":
-        echo "init sd";
+        addVideo($conn);
+        break;
+    case "ajout":
+        ajout($conn);
         break;
     case "ViewVideo":
         echo "init sd";
